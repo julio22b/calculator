@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="display"></div>
+        <div class="top">
+            <div class="display" aria-placeholder="0"></div>
+            <p class="para"></p>
+        </div>
         <div class="buttons-container">
-            <button class="button fat delete">Clear</button>
-            <button class="button all-clear">AC</button>
+            <button class="button fat delete">⌫</button>
+            <button class="button fat all-clear">AC</button>
             <button class="button operator" value="/">/</button>
             <button class="button number" value="7">7</button>
             <button class="button number" value="8">8</button>
@@ -26,7 +30,7 @@
             <button class="button number" value="2">2</button>
             <button class="button number" value="3">3</button>
             <button class="button operator" value="+">+</button>
-            <button class="button number " value="0">0</button>
+            <button class="button number" value="0">0</button>
             <button class="button dot">.</button>
             <button class="button fat equal" value="=">=</button>       
         </div>

@@ -29,6 +29,10 @@ function operate(operator, a, b){
 }
  
 let toDisplay = document.querySelector('.display');
+let para = document.querySelector('.para')
+
+
+
 let values = {
     value1: '',
     operator: '',
@@ -73,6 +77,7 @@ for (let i = 0; i < operatorBtns.length; i++){
         } else if(values.operator){
 
             if(values.value1 && values.operator && values.value2){
+                para.textContent = `${values.value1} ${values.operator} ${values.value2}`
                 toDisplay.textContent = `${operate(values.operator, values.value1, values.value2)}`
                 return values.value1 = `${operate(values.operator, parseFloat(values.value1) , parseFloat(values.value2))}`,
                 values.operator = e.target.getAttribute('value'),
@@ -93,15 +98,19 @@ for (let i = 0; i < operatorBtns.length; i++){
 const equalBtn = document.querySelector('.equal')
 equalBtn.addEventListener('click',function _updateValues(){
         if(values.value2 == 0 && values.operator === '/'){ 
+            values.value1 = '', values.operator = '', values.value2 = '', toDisplay.textContent = ''
             return alert(`I'm just a cheap calculator.`)
         } else if (!values.value1 || !values.operator || !values.value2){
             return //if any of the values doesn't exist then the button doesn't do anything
+        } else {
+            para.textContent = `${values.value1} ${values.operator} ${values.value2}`
+            toDisplay.textContent = `${operate(values.operator, values.value1, values.value2).toFixed(1)}`
+            values.value1 = `${operate(values.operator, parseFloat(values.value1) , parseFloat(values.value2)).toFixed(1)}`
+            values.operator = ''
+            values.value2 = '' 
+            console.log(values)
         }
-        toDisplay.textContent = `${operate(values.operator, values.value1, values.value2).toFixed(1)}`
-        values.value1 = `${operate(values.operator, parseFloat(values.value1) , parseFloat(values.value2)).toFixed(1)}`
-        values.operator = ''
-        values.value2 = '' 
-        console.log(values)
+        
     })
  
 // dot button. Adds dot to 1st value if !2nd or adds dot to 2nd value if both exist.
@@ -140,6 +149,7 @@ allClearBtn.addEventListener('click', e => {
         operator: '',
         value2: ''
     }
+    para.textContent = ''
 })
 
 // clear button
