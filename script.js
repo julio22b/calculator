@@ -44,10 +44,10 @@ for (let i = 0; i < numberBtns.length; i++) {
     numberBtns[i].addEventListener('click', (e) => {
         if (values.operator) {
             toDisplay.textContent += `${e.target.getAttribute('value')}`;
-            return (values.value2 += e.target.getAttribute('value')), console.log(values);
+            return (values.value2 += e.target.getAttribute('value'));
         } else if (!values.operator) {
             toDisplay.textContent += `${e.target.getAttribute('value')}`;
-            return (values.value1 += e.target.getAttribute('value')), console.log(values);
+            return (values.value1 += e.target.getAttribute('value'));
         } else if (values.value1 && values.operator && values.value2) {
             toDisplay.textContent = `${operate(values.operator, values.value1, values.value2)}`;
             values.value1 = `${operate(
@@ -177,5 +177,63 @@ clearBtn.addEventListener('click', (e) => {
             )}`),
             (values.value2 = `${values.value2.slice(0, -1)}`)
         );
+    }
+});
+
+const sortedNumberBtns = Array.from(numberBtns).sort((a, b) => a.value - b.value);
+console.log(operatorBtns);
+document.addEventListener('keydown', (e) => {
+    console.log(e.keyCode);
+    switch (e.keyCode) {
+        case 96:
+            sortedNumberBtns[0].click();
+            break;
+        case 97:
+            sortedNumberBtns[1].click();
+            break;
+        case 98:
+            sortedNumberBtns[2].click();
+            break;
+        case 99:
+            sortedNumberBtns[3].click();
+            break;
+        case 100:
+            sortedNumberBtns[4].click();
+            break;
+        case 101:
+            sortedNumberBtns[5].click();
+            break;
+        case 102:
+            sortedNumberBtns[6].click();
+            break;
+        case 103:
+            sortedNumberBtns[7].click();
+            break;
+        case 104:
+            sortedNumberBtns[8].click();
+            break;
+        case 105:
+            sortedNumberBtns[9].click();
+            break;
+        case 8:
+            clearBtn.click();
+            break;
+        case 13:
+            equalBtn.click();
+            break;
+        case 111:
+            operatorBtns[0].click();
+            break;
+        case 106:
+            operatorBtns[1].click();
+            break;
+        case 109:
+            operatorBtns[2].click();
+            break;
+        case 107:
+            operatorBtns[3].click();
+            break;
+        default:
+            break;
     }
 });
