@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="top">
-            <div class="display" aria-placeholder="0"></div>
-            <p class="para"></p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="top">
+                <div class="display" aria-placeholder="0"></div>
+                <p class="para"></p>
+            </div>
+            <div class="buttons-container">
+                <button class="button fat delete">⌫</button>
+                <button class="button fat all-clear">AC</button>
+                <button class="button operator" value="/">/</button>
+                <button class="button number" value="7">7</button>
+                <button class="button number" value="8">8</button>
+                <button class="button number" value="9">9</button>
+                <button class="button operator" value="*">*</button>
+                <button class="button number" value="4">4</button>
+                <button class="button number" value="5">5</button>
+                <button class="button number" value="6">6</button>
+                <button class="button operator" value="-">-</button>
+                <button class="button number" value="1">1</button>
+                <button class="button number" value="2">2</button>
+                <button class="button number" value="3">3</button>
+                <button class="button operator" value="+">+</button>
+                <button class="button number" value="0">0</button>
+                <button class="button dot">.</button>
+                <button class="button fat equal" value="=">=</button>
+            </div>
         </div>
-        <div class="buttons-container">
-            <button class="button fat delete">⌫</button>
-            <button class="button fat all-clear">AC</button>
-            <button class="button operator" value="/">/</button>
-            <button class="button number" value="7">7</button>
-            <button class="button number" value="8">8</button>
-            <button class="button number" value="9">9</button>
-            <button class="button operator" value="*">*</button>
-            <button class="button number" value="4">4</button>
-            <button class="button number" value="5">5</button>
-            <button class="button number" value="6">6</button>
-            <button class="button operator" value="-">-</button>
-            <button class="button number" value="1">1</button>
-            <button class="button number" value="2">2</button>
-            <button class="button number" value="3">3</button>
-            <button class="button operator" value="+">+</button>
-            <button class="button number" value="0">0</button>
-            <button class="button dot">.</button>
-            <button class="button fat equal" value="=">=</button>       
-        </div>
-    </div>
-    <script src="./script.js"></script>
-</body>
+        <script src="./script.js"></script>
+    </body>
 </html>

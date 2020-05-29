@@ -1,22 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 20px;
 }
 
-.container{
+.container {
     border: none;
     border-radius: 5px;
     height: 510px;
     width: 300px;
-    margin: 80px auto;
-    -webkit-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 21px -1px rgba(0,0,0,0.65);
+    margin: 18vh auto;
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.65);
 }
 
-.display{
+.display {
     padding: 40px 25px 0 20px;
     width: 100%;
     height: 120px;
@@ -26,34 +26,38 @@
     text-overflow: clip;
     font-size: 38px;
     line-height: 1;
-    font-family: 'Roboto Mono', monospace;  
+    font-family: 'Roboto Mono', monospace;
     color: white;
     word-wrap: break-word;
 }
 
-.button{
+.button {
     padding: 0;
     background-color: white;
     height: 64px;
     border: none;
     font-weight: 500;
     font-size: 24px;
+    cursor: pointer;
 }
 
-.operator{
+.operator {
     font-weight: bold;
 }
 
-.fat{
+.fat {
     width: 50%;
 }
 
-.number, .operator, .all-clear, .dot{
+.number,
+.operator,
+.all-clear,
+.dot {
     width: 25%;
     color: black;
 }
 
-.buttons-container{
+.buttons-container {
     margin: 0 auto;
     width: 300px;
     height: 320px;
@@ -62,7 +66,7 @@
     flex-wrap: wrap;
 }
 
-.para{
+.para {
     width: 100%;
     text-align: right;
     height: 70px;
@@ -72,56 +76,71 @@
     padding: 15px;
 }
 
-.top, .equal{
-    background: #a8c0ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.top,
+.equal {
+    background: #a8c0ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3f2b96, #a8c0ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #3f2b96,
+        #a8c0ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.equal{
-    
+.equal {
     font-size: 56px;
     color: white;
     line-height: 1;
-
 }
 
-.operator{
+.operator {
     background-color: rgb(240, 240, 240);
     color: black;
 }
 
-.all-clear, .delete{
+.all-clear,
+.delete {
     background-color: white;
     color: black;
 }
 
-
-.number:hover, .dot:hover, .operator:hover{
-    background: #a8c0ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.number:hover,
+.dot:hover,
+.operator:hover {
+    background: #a8c0ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3f2b96, #a8c0ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #3f2b96,
+        #a8c0ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-weight: 600;
     color: white;
 }
 
-.all-clear:hover, .delete:hover{
+.all-clear:hover,
+.delete:hover {
     background-color: rgb(240, 240, 240);
     color: black;
 }
 
-.equal:hover{
-    background: #a8c0ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.equal:hover {
+    background: #a8c0ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #3f2b96,
+        #a8c0ff
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #3f2b96,
+        #a8c0ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
-.delete{
-    font-size: 3em;
-    padding-bottom: 15px;
-    line-height: 0.4;
+.delete {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
