@@ -112,11 +112,10 @@ equalBtn.addEventListener('click', function _updateValues() {
         toDisplay.textContent = `${operate(values.operator, values.value1, values.value2).toFixed(
             1,
         )}`;
-        values.value1 = `${operate(
-            values.operator,
-            parseFloat(values.value1),
-            parseFloat(values.value2),
-        ).toFixed(1)}`;
+        if (toDisplay.textContent.endsWith('0')) {
+            toDisplay.textContent = toDisplay.textContent.split('.')[0];
+        }
+        values.value1 = toDisplay.textContent;
         values.operator = '';
         values.value2 = '';
         console.log(values);
@@ -181,9 +180,7 @@ clearBtn.addEventListener('click', (e) => {
 });
 
 const sortedNumberBtns = Array.from(numberBtns).sort((a, b) => a.value - b.value);
-console.log(operatorBtns);
 document.addEventListener('keydown', (e) => {
-    console.log(e.keyCode);
     switch (e.keyCode) {
         case 96:
             sortedNumberBtns[0].click();
